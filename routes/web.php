@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\UsersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +17,31 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/tester', function () {
-  return view('testpage');
-}); 
+/*
+Route::get('/tester/{name?}/{lastName?}/{age?}', static function (string $name = '', string $lastName = '', string $age = '') {
+  return view('testpage',
+  [
+      'name'=>'Mario',
+      'lastName'=>'Rossi',
+      'age' => 40
+  ]);
+})
+//->whereNumber('age')
+//->whereAlpha(['name','surname'])
+//Parametri con RegEx: verifico le espressioni regolari dei parametri
+->where(
+    ['age','[0-9]{2,3}'],
+    ['name','[a-zA-z]{2,}'],
+    ['lastName','[a-zA-z]{2,}'],
+);
+
+Route::view('user-details','testpage',
+    [
+        'name'=>'Mario',
+        'lastName'=>'Rossi'
+    ]
+);
+
+//Router::redirected('user-details','tester');*/
+
+Route::resource('tester',UsersController::class);
