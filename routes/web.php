@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\Users2Controller;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -43,7 +44,11 @@ Route::view('user-details','testpage',
 );
 
 //Router::redirected('user-details','tester');*/
-
+/*
 Route::resource('users',UsersController::class);
 
-Route::get('users/userDetail/{$user}',[UsersController::class,'userDetail']);
+Route::apiResource('api/users',Users2Controller::class);
+
+Route::get('users/userDetail/{user}',[UsersController::class,'userDetail']);*/
+
+

@@ -1,0 +1,1 @@
+<h1>This is a simple PHP About page by Laravel</h1>
