@@ -36,7 +36,7 @@ class UsersController extends Controller
      */
     public function show(User $user)
     {
-        //
+        return $user;
     }
 
     /**
@@ -62,4 +62,11 @@ class UsersController extends Controller
     {
         //
     }
+
+
+    public function userDetail(User $user){
+        return $user->name." ".$user->lastName;
+    }
+
+
 }

@@ -44,4 +44,6 @@ Route::view('user-details','testpage',
 
 //Router::redirected('user-details','tester');*/
 
-Route::resource('tester',UsersController::class);
+Route::resource('users',UsersController::class);
+
+Route::get('users/userDetail/{$user}',[UsersController::class,'userDetail']);
