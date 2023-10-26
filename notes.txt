@@ -1,0 +1,9 @@
+
+
+- MVC
+- Funzioni Eloquent e Compact
+- Blade pages:
+    - Extends (a Section)
+    - Yield and Sections
+
+@if @else @endif | @foreach and $loop array variable (loop first, last, remaining) | @for | @while

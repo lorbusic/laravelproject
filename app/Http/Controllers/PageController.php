@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\View;
 
 class PageController extends Controller
 {
-    protected $title = "Our staff";
+    protected $title = "Our staff - By title";
     protected $data = [
         [
             "name"=> "Mario",
@@ -59,8 +59,9 @@ class PageController extends Controller
             ->withStaff($this->data)
             ->withTitle($this->title);*/
 
-        $staff = $this->data;
+        //$staff = array();
+        $staff = $this->data; //array type
         $title = $this->title;
-        return view('staff',compact('staff','title'));
+        return view('staffb',compact('staff','title'));
     }
 }
